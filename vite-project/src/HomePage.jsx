@@ -98,15 +98,13 @@ function HomePage() {
       countKey = 1;
       if (typeSearch === "" && selectedUsers.length > 0) {
         // Highlight the last chip when countKey is 1
-        if (typeSearch === "" && selectedUsers.length > 0) {
-          const lastSelectedUserElement = document.querySelector(
-            ".selectedUser:last-child"
-          );
-          if (lastSelectedUserElement) {
-            lastSelectedUserElement.classList.add("highlight");
-          }
-        }
+        const selectedUserElements = document.querySelectorAll(".selectedUser");
+      if (selectedUserElements.length > 0) {
+        const lastSelectedUserElement =
+          selectedUserElements[selectedUserElements.length - 1];
+        lastSelectedUserElement.classList.add("highlight");
       }
+    }
     } else if (e.key === "Backspace" && countKey === 1) {
       countKey = 2;
 
