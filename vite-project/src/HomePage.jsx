@@ -139,6 +139,11 @@ function HomePage() {
   };
 
   
+  //to always show drop down when user is typing
+  useEffect(() => {
+    setShowList(true);
+}, [typeSearch]);
+
 
   return (
     <div className="homepage">
