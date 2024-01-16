@@ -64,6 +64,7 @@
 }
 .highlight{
  border: 2px solid black;
+ background-color: rgb(115, 109, 109);
 }
 .x {
   margin-left: 20px;
