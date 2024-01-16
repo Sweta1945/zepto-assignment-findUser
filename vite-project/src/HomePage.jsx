@@ -64,6 +64,11 @@ function HomePage() {
 // when i select the user from dropdown it should accordingly get set inside the selected user and also setFiltered user
 
   const handleUserSelect = (name) => {
+    //before adding new user we lll remove the applied highlights from selected user (when backspace was pressed)
+  const selectedUserElements = document.querySelectorAll(".selectedUser");
+  selectedUserElements.forEach((element) => {
+    element.classList.remove("highlight");
+  });
     setSelectedUsers([...selectedUsers, name]);
     setFilteredUsers([...filteredUsers, name]);
     setTypeSearch(""); //when user select someone then, typesearh will get empty
